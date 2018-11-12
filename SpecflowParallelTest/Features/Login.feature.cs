@@ -81,11 +81,14 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "admin",
                         "admin"});
+            table1.AddRow(new string[] {
+                        "admin1",
+                        "admin2"});
 #line 8
  testRunner.And("I enter username and password", ((string)(null)), table1, "And ");
-#line 11
- testRunner.And("I click login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
+ testRunner.And("I click login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
  testRunner.Then("I should see user logged in to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
