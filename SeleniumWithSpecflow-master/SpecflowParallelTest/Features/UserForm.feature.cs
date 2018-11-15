@@ -115,8 +115,6 @@ this.ScenarioSetup(scenarioInfo);
                         "k"});
 #line 15
  testRunner.Then("I verify the entered user form details in the application database", ((string)(null)), table3, "Then ");
-#line 18
- testRunner.Then("I logout of application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

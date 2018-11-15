@@ -38,19 +38,19 @@ namespace SpecflowParallelTest
             htmlReporter.Configuration().Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             //Attach report to reporter
             extent = new ExtentReports();
-            klov = new KlovReporter();
+            //klov = new KlovReporter();
 
-            klov.InitMongoDbConnection("localhost", 27017);
+           // klov.InitMongoDbConnection("localhost", 27017);
 
-            klov.ProjectName = "ExecuteAutomation Test";
+           // klov.ProjectName = "ExecuteAutomation Test";
 
             // URL of the KLOV server
-            klov.KlovUrl = "http://localhost:5689";
+            //klov.KlovUrl = "http://localhost:5689";
 
-            klov.ReportName = "Karthik KK" + DateTime.Now.ToString();
+          //  klov.ReportName = "Karthik KK" + DateTime.Now.ToString();
 
 
-            extent.AttachReporter(htmlReporter, klov);
+            extent.AttachReporter(htmlReporter);
         }
 
         [AfterTestRun]

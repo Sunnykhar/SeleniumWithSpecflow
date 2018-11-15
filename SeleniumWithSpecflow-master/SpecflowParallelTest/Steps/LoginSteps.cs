@@ -50,7 +50,7 @@ namespace SpecflowParallelTest.Steps
         [Then(@"I should see user logged in to the application")]
         public void ThenIShouldSeeUserLoggedInToTheApplication()
         {
-            var element = _driver.FindElement(By.XPath("//h1[contains(text(),'Execute Automation Selenium')]"));
+            var element = _driver.FindElement(By.XPath("//h1[contains(text(),'Automation Selenium')]"));
 
             //An way to assert multiple properties of single test
             Assert.Multiple(() =>

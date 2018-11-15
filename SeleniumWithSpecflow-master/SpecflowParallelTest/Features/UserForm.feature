@@ -15,4 +15,4 @@ Scenario: User Details form entry verification
 	Then I verify the entered user form details in the application database
 		| Initial | FirstName | MiddleName |
 		| k      | Karthik   |   k         |
-	Then I logout of application
+	#Then I logout of application

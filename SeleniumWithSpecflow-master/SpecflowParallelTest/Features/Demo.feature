@@ -8,7 +8,7 @@ Scenario: User Details form entry verification
 	Given I navigate to application
 	And I enter username and password
 		| UserName | Password |
-		| admin    | admin    |
+		| admin    | admin1    |
 	And I click login
 	And I start entering user form details like
 		| Initial | FirstName | MiddleName | Language |

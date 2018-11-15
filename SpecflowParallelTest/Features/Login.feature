@@ -8,6 +8,6 @@ Scenario: Login user as Administrator
 	And I enter username and password
 		| UserName | Password |
 		| admin    | admin    |
-		| admin1    | admin2    |
+		| admin1   | admin2   |
 	And I click login
 	Then I should see user logged in to the application
