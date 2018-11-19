@@ -111,7 +111,7 @@ this.ScenarioSetup(scenarioInfo);
                         "MiddleName"});
             table3.AddRow(new string[] {
                         "k",
-                        "Karthik",
+                        "Sunny",
                         "k"});
 #line 15
  testRunner.Then("I verify the entered user form details in the application database", ((string)(null)), table3, "Then ");
