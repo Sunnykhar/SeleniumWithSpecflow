@@ -1,8 +1,8 @@
-﻿Feature: User Form
+﻿Feature: User FormSK
 	Feature which holds all the user details entry
 
 @positive @UI @Fix3452
-Scenario: User Details form entry verification
+Scenario: User Details form entry verificationF
 	Given I navigate to application
 	And I enter username and password
 		| UserName | Password  |
