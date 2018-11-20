@@ -1,9 +1,9 @@
-﻿Feature: Login
+﻿Feature: LoginErr
 	Check if login functionality works
 
 
 @mytag
-Scenario: Login user as Administrator
+Scenario: Login user as Administrator Err
 	Given I navigate to application
 	And I enter username and password
 		| UserName | Password |

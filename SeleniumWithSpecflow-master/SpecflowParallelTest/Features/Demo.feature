@@ -1,14 +1,14 @@
-﻿Feature: Demo
+﻿Feature: DemoS
 	In order to avoid silly mistakes
 	As a math idiot
 	I want to be told the sum of two numbers
 
 @positive @UI @Fix3452
-Scenario: User Details form entry verification
+Scenario: User Details form entry verificationS
 	Given I navigate to application
 	And I enter username and password
 		| UserName | Password |
-		| admin    | admin    |
+		| admin    | admin1    |
 	And I click login
 	And I start entering user form details like
 		| Initial | FirstName | MiddleName | Language |

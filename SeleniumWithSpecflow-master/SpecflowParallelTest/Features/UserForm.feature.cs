@@ -18,8 +18,8 @@ namespace SpecflowParallelTest.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("User Form")]
-    public partial class UserFormFeature
+    [NUnit.Framework.DescriptionAttribute("User FormSK")]
+    public partial class UserFormSKFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace SpecflowParallelTest.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "User Form", "\tFeature which holds all the user details entry", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "User FormSK", "\tFeature which holds all the user details entry", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,13 +64,13 @@ namespace SpecflowParallelTest.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User Details form entry verification")]
+        [NUnit.Framework.DescriptionAttribute("User Details form entry verificationF")]
         [NUnit.Framework.CategoryAttribute("positive")]
         [NUnit.Framework.CategoryAttribute("UI")]
         [NUnit.Framework.CategoryAttribute("Fix3452")]
-        public virtual void UserDetailsFormEntryVerification()
+        public virtual void UserDetailsFormEntryVerificationF()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Details form entry verification", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Details form entry verificationF", new string[] {
                         "positive",
                         "UI",
                         "Fix3452"});
@@ -111,12 +111,10 @@ this.ScenarioSetup(scenarioInfo);
                         "MiddleName"});
             table3.AddRow(new string[] {
                         "k",
-                        "Karthik",
+                        "Sunny",
                         "k"});
 #line 15
  testRunner.Then("I verify the entered user form details in the application database", ((string)(null)), table3, "Then ");
-#line 18
- testRunner.Then("I logout of application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
