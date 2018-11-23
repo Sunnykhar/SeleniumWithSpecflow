@@ -10,7 +10,7 @@ Scenario: User Details form entry verificationF
 	And I click login
 	And I start entering user form details like
 		| Initial | FirstName | MiddleName | Language |
-		| k       | Karthik   | k          | Hindi    |
+		| k       | Karthik   | k          | English    |
 	And I click submit button
 	Then I verify the entered user form details in the application database
 		| Initial | FirstName | MiddleName |
