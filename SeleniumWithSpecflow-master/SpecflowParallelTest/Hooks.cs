@@ -56,7 +56,7 @@ namespace SpecflowParallelTest
         public static void TearDownReport()
         {
             //Flush report once test completes
-            extent.Flush();
+            //extent.Flush();
         }
 
         [BeforeFeature]
