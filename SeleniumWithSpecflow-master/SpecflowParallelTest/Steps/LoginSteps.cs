@@ -56,7 +56,7 @@ namespace SpecflowParallelTest.Steps
             Assert.Multiple(() =>
             {
                 //Assert.That(element.Text, Is.Null, "Header text not found !!!");
-                Assert.That(element.Text, Is.Null, "Header text not found !!!");
+                Assert.AreEqual(element.Text, "Execute Automation Selenium Test Site", "Header text not found !!!");
             });
         }
 

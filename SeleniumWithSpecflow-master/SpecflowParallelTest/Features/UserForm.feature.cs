@@ -99,7 +99,7 @@ this.ScenarioSetup(scenarioInfo);
                         "k",
                         "Karthik",
                         "k",
-                        "Hindi"});
+                        "English"});
 #line 11
  testRunner.And("I start entering user form details like", ((string)(null)), table2, "And ");
 #line 14
