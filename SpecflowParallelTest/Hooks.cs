@@ -20,7 +20,10 @@ namespace SpecflowParallelTest
         private static ExtentTest scenario;
         private static ExtentReports extent;
         private static KlovReporter klov;
+        public static string Auth = "skhar@autino.com";
+        public static string authkey = "uc506736fa486d9b";
 
+        public static RemoteSessionSettings caps;
         private readonly IObjectContainer _objectContainer;
 
         private RemoteWebDriver _driver;
@@ -117,7 +120,9 @@ namespace SpecflowParallelTest
         [BeforeScenario]
         public void Initialize()
         {
-            SelectBrowser(BrowserType.Chrome);
+             caps = CBT();
+                driver = new RemoteWebDriver(new Uri("http://hub.crossbrowsertesting.com:80/wd/hub"), caps, TimeSpan.FromSeconds(180));
+           // SelectBrowser(BrowserType.Chrome);
             //Create dynamic scenario name
             scenario = featureName.CreateNode<Scenario>("given statment","Description");
         }
@@ -128,7 +133,26 @@ namespace SpecflowParallelTest
             _driver.Quit();
         }
 
+ public static RemoteSessionSettings CBT()
+        {
+            caps = new RemoteSessionSettings();
+            caps.AddMetadataSetting("name", "SpecFlow-CBT");
+            //caps.SetCapability("record_video", "true");
+            // caps.SetCapability("build", "1.35");
+            caps.AddMetadataSetting("browserName", "Firefox");
+            caps.AddMetadataSetting("version", "53x64");
+            caps.AddMetadataSetting("platform", "Windows 10");
+            //caps.SetCapability("screenResolution", "1366x768");
+            // caps.SetCapability("record_network", "false");
+            caps.AddMetadataSetting("username", Auth);
+            caps.AddMetadataSetting("password", authkey);
 
+            // Start the remote webdriver
+
+            return caps;
+
+
+        }
         internal void SelectBrowser(BrowserType browserType)
         {
             switch (browserType)
