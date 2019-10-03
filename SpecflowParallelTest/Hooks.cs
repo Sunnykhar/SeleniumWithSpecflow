@@ -1,4 +1,5 @@
 ﻿using BoDi;
+using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -8,7 +9,7 @@ using TechTalk.SpecFlow;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports.Gherkin.Model;
-using System;
+using OpenQA.Selenium.Remote;
 
 namespace SpecflowParallelTest
 {
