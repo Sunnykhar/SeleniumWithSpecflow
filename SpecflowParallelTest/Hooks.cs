@@ -19,9 +19,6 @@ namespace SpecflowParallelTest
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
-        //private static KlovReporter klov;
-        //public static string Auth = "skhar@autino.com";
-        // public static string authkey = "uc506736fa486d9b";
 
         public RemoteSessionSettings caps;
         private readonly IObjectContainer _objectContainer;
@@ -39,20 +36,7 @@ namespace SpecflowParallelTest
             //Initialize Extent report before test starts
             var htmlReporter = new ExtentHtmlReporter(@"C:\extentreport\SeleniumWithSpecflow\SpecflowParallelTest\ExtentReport.html");
             htmlReporter.Configuration().Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            //Attach report to reporter
             extent = new ExtentReports();
-            //klov = new KlovReporter();
-
-            // klov.InitMongoDbConnection("localhost", 27017);
-
-            //  klov.ProjectName = "ExecuteAutomation Test";
-
-            // URL of the KLOV server
-            //  klov.KlovUrl = "http://localhost:5689";
-
-            // klov.ReportName = "Karthik KK" + DateTime.Now.ToString();
-
-
             extent.AttachReporter(htmlReporter);
         }
 
@@ -120,9 +104,7 @@ namespace SpecflowParallelTest
         [BeforeScenario]
         public void Initialize()
         {
-            caps = CBT();
-            _driver = new RemoteWebDriver(new Uri("http://hub.crossbrowsertesting.com:80/wd/hub"), caps, TimeSpan.FromSeconds(180));
-            // SelectBrowser(BrowserType.Chrome);
+             SelectBrowser(BrowserType.Chrome);
             //Create dynamic scenario name
             scenario = featureName.CreateNode<Scenario>("given statment", "Description");
         }
@@ -134,26 +116,7 @@ namespace SpecflowParallelTest
         }
 
 
-        public RemoteSessionSettings CBT()
-        {
-            caps = new RemoteSessionSettings();
-            caps.AddMetadataSetting("name", "SpecFlow-CBT");
-            //caps.SetCapability("record_video", "true");
-            // caps.SetCapability("build", "1.35");
-            caps.AddMetadataSetting("browserName", "Firefox");
-            caps.AddMetadataSetting("version", "53x64");
-            caps.AddMetadataSetting("platform", "Windows 10");
-            //caps.SetCapability("screenResolution", "1366x768");
-            // caps.SetCapability("record_network", "false");
-            caps.AddMetadataSetting("username", "skhar@autino.com");
-            caps.AddMetadataSetting("password", "uc506736fa486d9b");
-
-            // Start the remote webdriver
-
-            return caps;
-
-
-        }
+     
 
         internal void SelectBrowser(BrowserType browserType)
         {
