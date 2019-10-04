@@ -43,7 +43,7 @@ namespace SpecflowParallelTest.Steps
         public void GivenIClickLogin()
         {
             Thread.Sleep(1000);
-            page.EnterUserNameAndPassword("admin", "Admin");
+            
             _driver.FindElement(By.Name("Login")).Submit();
             Thread.Sleep(2000);
         }
