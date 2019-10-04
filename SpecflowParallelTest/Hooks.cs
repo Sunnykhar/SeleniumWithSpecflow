@@ -9,6 +9,7 @@ using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports.Gherkin.Model;
 using OpenQA.Selenium.Remote;
+using SpecflowParallelTest.Pages;
 
 namespace SpecflowParallelTest
 {
@@ -24,14 +25,11 @@ namespace SpecflowParallelTest
         // public static string authkey = "uc506736fa486d9b";
 
         public RemoteSessionSettings caps;
-        private readonly IObjectContainer _objectContainer;
 
-        private RemoteWebDriver _driver;
 
-        public Hooks(IObjectContainer objectContainer)
-        {
-            _objectContainer = objectContainer;
-        }
+        public RemoteWebDriver _driver;
+
+
 
         [BeforeTestRun]
         public static void InitializeReport()
@@ -122,6 +120,12 @@ namespace SpecflowParallelTest
         {
             caps = CBT();
             _driver = new RemoteWebDriver(new Uri("http://hub.crossbrowsertesting.com:80/wd/hub"), caps, TimeSpan.FromSeconds(180));
+
+            _driver.Navigate().GoToUrl("http://executeautomation.com/demosite/Login.html");
+
+            LoginPage page = new LoginPage(_driver);
+            page.EnterUserNameAndPassword("admin", "Admin");
+            _driver.FindElement(By.Name("Login")).Submit();
             // SelectBrowser(BrowserType.Chrome);
             //Create dynamic scenario name
             scenario = featureName.CreateNode<Scenario>("given statment", "Description");
@@ -140,13 +144,13 @@ namespace SpecflowParallelTest
             caps.AddMetadataSetting("name", "SpecFlow-CBT");
             //caps.SetCapability("record_video", "true");
             // caps.SetCapability("build", "1.35");
-            caps.AddMetadataSetting("browserName", "Firefox");
-            caps.AddMetadataSetting("version", "53x64");
+            caps.AddMetadataSetting("browserName", "chrome");
+            caps.AddMetadataSetting("version", "70");
             caps.AddMetadataSetting("platform", "Windows 10");
             //caps.SetCapability("screenResolution", "1366x768");
             // caps.SetCapability("record_network", "false");
             caps.AddMetadataSetting("username", "skhar@autino.com");
-            caps.AddMetadataSetting("password", "uc506736fa486d9b");
+            caps.AddMetadataSetting("password", "u5db61500cea1d66");
 
             // Start the remote webdriver
 
@@ -163,7 +167,7 @@ namespace SpecflowParallelTest
                     ChromeOptions option = new ChromeOptions();
                     //option.AddArgument("--headless");
                     _driver = new ChromeDriver(option);
-                    _objectContainer.RegisterInstanceAs<RemoteWebDriver>(_driver);
+
                     break;
                 case BrowserType.Firefox:
                     var driverDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -172,7 +176,7 @@ namespace SpecflowParallelTest
                     service.HideCommandPromptWindow = true;
                     service.SuppressInitialDiagnosticInformation = true;
                     _driver = new FirefoxDriver(service);
-                    _objectContainer.RegisterInstanceAs<RemoteWebDriver>(_driver);
+
                     break;
                 case BrowserType.IE:
                     break;

@@ -101,20 +101,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Features\Demo.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Demo.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\Login.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Login.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\UserForm.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserForm.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
     <Compile Include="Pages\LoginPage.cs" />
@@ -124,17 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\Demo.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Demo.feature.cs</LastGenOutput>
-    </None>
     <None Include="Features\Login.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Login.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\UserForm.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>UserForm.feature.cs</LastGenOutput>
     </None>
     <None Include="license" />
     <None Include="packages.config" />
