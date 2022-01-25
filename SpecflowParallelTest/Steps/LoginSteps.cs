@@ -56,10 +56,20 @@ namespace SpecflowParallelTest.Steps
             Assert.Multiple(() =>
             {
                Assert.That(element.Text, Is.Null, "Header text not found !!!");
-               // Assert.That(element.Text, Is.Null, "Header text not found !!!");
+               Assert.That(element.Text, Is.Null, "Header text not found !!!");
             });
         }
 
+        public void unused()
+        {
+           
+        }
+
+        public void unused1()
+        {
+            int a;
+
+        }
 
     }
 }
