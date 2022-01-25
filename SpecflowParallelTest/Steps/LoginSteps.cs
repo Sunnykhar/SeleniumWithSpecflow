@@ -55,8 +55,8 @@ namespace SpecflowParallelTest.Steps
             //An way to assert multiple properties of single test
             Assert.Multiple(() =>
             {
-                //Assert.That(element.Text, Is.Null, "Header text not found !!!");
-                Assert.That(element.Text, Is.Null, "Header text not found !!!");
+               Assert.That(element.Text, Is.Null, "Header text not found !!!");
+               // Assert.That(element.Text, Is.Null, "Header text not found !!!");
             });
         }
 
