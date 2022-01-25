@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecflowParallelTest", "SpecflowParallelTest\SpecflowParallelTest.csproj", "{082F6502-2237-48D7-926E-15DC72E38EE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoletestPro", "ConsoletestPro\ConsoletestPro.csproj", "{5136CFC1-6C4A-47AC-AA19-CB7D673F0D95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{082F6502-2237-48D7-926E-15DC72E38EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{082F6502-2237-48D7-926E-15DC72E38EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{082F6502-2237-48D7-926E-15DC72E38EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5136CFC1-6C4A-47AC-AA19-CB7D673F0D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5136CFC1-6C4A-47AC-AA19-CB7D673F0D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5136CFC1-6C4A-47AC-AA19-CB7D673F0D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5136CFC1-6C4A-47AC-AA19-CB7D673F0D95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B3D520D-B0F8-4F9D-AAE0-7662A25E28F2}
 	EndGlobalSection
 EndGlobal
