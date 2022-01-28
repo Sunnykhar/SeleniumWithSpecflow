@@ -1,14 +1,11 @@
-﻿using NUnit.Framework;
+﻿using AventStack.ExtentReports.Gherkin.Model;
+using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Threading;
 using OpenQA.Selenium.Remote;
 using SpecflowParallelTest.Pages;
+using System.Threading;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
-using AventStack.ExtentReports.Reporter;
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.Gherkin.Model;
 
 namespace SpecflowParallelTest.Steps
 {
@@ -55,14 +52,14 @@ namespace SpecflowParallelTest.Steps
             //An way to assert multiple properties of single test
             Assert.Multiple(() =>
             {
-               Assert.That(element.Text, Is.Null, "Header text not found !!!");
-               Assert.That(element.Text, Is.Null, "Header text not found !!!");
+                Assert.That(element.Text, Is.Null, "Header text not found !!!");
+                Assert.That(element.Text, Is.Null, "Header text not found !!!");
             });
         }
 
         public void unused()
         {
-           
+
         }
 
         public void unused1()

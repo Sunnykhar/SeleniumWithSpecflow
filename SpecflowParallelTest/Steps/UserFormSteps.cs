@@ -1,11 +1,7 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using OpenQA.Selenium.Remote;
+using System.Collections.Generic;
+using System.Threading;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -76,7 +72,7 @@ namespace SpecflowParallelTest.Steps
         [Then(@"I logout of application")]
         public void ThenILogoutOfApplication()
         {
-          //  ScenarioContext.Current.Pending();
+            //  ScenarioContext.Current.Pending();
         }
 
 

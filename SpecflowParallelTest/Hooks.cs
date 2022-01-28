@@ -1,14 +1,13 @@
-﻿using BoDi;
-using System;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
+using BoDi;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
 using System.Reflection;
 using TechTalk.SpecFlow;
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.Reporter;
-using AventStack.ExtentReports.Gherkin.Model;
-using OpenQA.Selenium.Remote;
 
 namespace SpecflowParallelTest
 {
@@ -104,7 +103,7 @@ namespace SpecflowParallelTest
         [BeforeScenario]
         public void Initialize()
         {
-             SelectBrowser(BrowserType.Chrome);
+            SelectBrowser(BrowserType.Chrome);
             //Create dynamic scenario name
             scenario = featureName.CreateNode<Scenario>("given statment", "Description");
         }
@@ -116,7 +115,7 @@ namespace SpecflowParallelTest
         }
 
 
-     
+
 
         internal void SelectBrowser(BrowserType browserType)
         {
